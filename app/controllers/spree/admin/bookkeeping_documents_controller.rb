@@ -13,6 +13,12 @@ module Spree
         end
       end
 
+      def new
+        @order.invoice_for_order
+        flash[:success] = Spree.t(:new_documents_created, scope: :print_invoice)
+        redirect_to admin_order_bookkeeping_documents_path(@order)
+      end
+
       def index
         # Massaging the params for the index view like Spree::Admin::Orders#index
         params[:q] ||= {}

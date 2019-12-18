@@ -48,3 +48,4 @@ en:
       invoice_slip_legend: Invoice/Slip Content
       invoice_number: 'Invoice number: %{number}'
       invoice_date: 'Invoice date: %{date}'
+      new_documents_created: New documents successfully created
